@@ -1,16 +1,22 @@
-use std::fmt;
+use reqwest::Error as ReqwestError;
 use std::error::Error;
-use reqwest::{Error as ReqwestError};
+use std::fmt;
 
 #[derive(Debug)]
 pub struct RequestError {
   pub message: String,
 }
 
+impl RequestError {
+  pub fn new(message: String) -> Self {
+    RequestError { message }
+  }
+}
+
 impl From<ReqwestError> for RequestError {
   fn from(error: ReqwestError) -> Self {
     RequestError {
-      message: error.status().unwrap().to_string()
+      message: error.status().unwrap().to_string(),
     }
   }
 }

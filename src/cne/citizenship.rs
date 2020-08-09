@@ -4,7 +4,7 @@ use std::string::ToString;
 
 /// Enumerates posible citizenship statuses
 /// such as V (Venezuelan) and E (Foreigner)
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub enum Citizenship {
   V,
   E,
@@ -22,9 +22,11 @@ impl FromStr for Citizenship {
       "V" => Ok(Citizenship::V),
       "E" => Ok(Citizenship::E),
       _ => Err(ParseCitizenshipError {
-        message: format!("Invalid citizen value provided, {}. Valid values are either V and E.",
-          s)
-      })
+        message: format!(
+          "Invalid citizen value provided, {}. Valid values are either V and E.",
+          s
+        ),
+      }),
     }
   }
 }
@@ -33,7 +35,7 @@ impl ToString for Citizenship {
   fn to_string(&self) -> String {
     match self {
       Citizenship::V => String::from("V"),
-      Citizenship::E => String::from("E")
+      Citizenship::E => String::from("E"),
     }
   }
 }

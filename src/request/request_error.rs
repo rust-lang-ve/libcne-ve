@@ -16,7 +16,7 @@ impl RequestError {
 impl From<ReqwestError> for RequestError {
   fn from(error: ReqwestError) -> Self {
     RequestError {
-      message: error.status().unwrap().to_string(),
+      message: error.status().unwrap_or_default().to_string(),
     }
   }
 }

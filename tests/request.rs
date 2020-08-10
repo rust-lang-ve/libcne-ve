@@ -4,6 +4,7 @@ mod test {
     use libcne::cne::Citizenship;
 
     #[test]
+    #[ignore]
     fn test_find_elector() {
         let elector = tokio_test::block_on(find(Citizenship::V, "19255544".into())).unwrap();
         assert_eq!(elector.citizenship, Citizenship::V);

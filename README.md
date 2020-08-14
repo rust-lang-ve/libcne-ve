@@ -15,7 +15,7 @@ To install the latest release, add the crate as follows to your dependencies lis
 libcne = { git = "https://github.com/rust-lang-ve/libcne.git", branch = "master" }
 ```
 
-If you want to use an specific version, you must add the crate to your `Cargo.toml` as follows:
+If you want to use a specific version, you must add the crate to your `Cargo.toml` as follows:
 
 ```toml
 [dependencies]

@@ -8,11 +8,18 @@
 
 ## Installation
 
-Add the `libcne` crate to your `Cargo.toml`.
+To install the latest release, add the crate as follows to your dependencies list in your `Cargo.toml`.
 
 ```toml
 [dependencies]
 libcne = { git = "https://github.com/rust-lang-ve/libcne.git", branch = "master" }
+```
+
+If you want to use an specific version, you must add the crate to your `Cargo.toml` as follows:
+
+```toml
+[dependencies]
+libcne = { git = "https://github.com/rust-lang-ve/libcne.git", tag = "v0.1.0" }
 ```
 
 ## Motivation

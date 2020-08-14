@@ -1,10 +1,19 @@
-<div align="left">
-  <img src="https://avatars3.githubusercontent.com/u/68873317?s=100&v=4" height="100" width="100" />
-  <div style="display: inline-block; margin-left: 1rem;">
-    <h1>libcne</h1>
-    <span>Fetch public elector data from CNE website</span>
+<div>
+  <div align="center" style="display: block; text-align: center;">
+    <img src="https://avatars3.githubusercontent.com/u/68873317?s=120&v=4" height="120" width="120" />
   </div>
+  <h1 align="center">libcne</h1>
+  <span align="center">Fetch public elector data from CNE website</span>
 </div>
+
+## Installation
+
+Add the `libcne` crate to your `Cargo.toml`.
+
+```toml
+[dependencies]
+libcne = { git = "https://github.com/rust-lang-ve/libcne.git", branch = "master" }
+```
 
 ## Motivation
 

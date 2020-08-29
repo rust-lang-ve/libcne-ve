@@ -43,7 +43,7 @@ use libcne_ve::cne::{Citizenship, Elector};
 #[tokio::main]
 async fn main() {
   let elector_id: String = String::from("123123123");
-  let elector: Elector = libcne_ve::request::find(Citizenship::V, elector_id).await.unwrap();
+  let elector: Elector = find(Citizenship::V, elector_id).await.unwrap();
 
   println!("{:?}", elector);
 }

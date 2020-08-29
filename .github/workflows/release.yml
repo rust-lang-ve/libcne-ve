@@ -53,7 +53,7 @@ jobs:
     - name: Build
       run: cargo build --release --locked
 
-    - name: archive release
+    - name: Archive Release
       shell: bash
       run: |
         cp "target/release/${{ matrix.artifact_name }}" "${{ matrix.artifact_name }}"
@@ -103,15 +103,5 @@ jobs:
         env:
           CRATES_IO_TOKEN: ${{ secrets.CRATES_IO_TOKEN }}
 
-      - name: publish libcne-ve_core
-        run: cargo publish
-        working-directory: core
-
-      - name: Sleep for 30 seconds
-        uses: jakejarvis/wait-action@master
-        with:
-          time: '30s'
-
       - name: publish libcne-ve
         run: cargo publish
-        working-directory: cli

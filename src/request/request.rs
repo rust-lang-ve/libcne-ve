@@ -9,7 +9,7 @@ use std::time::Duration;
 ///
 /// # Example
 ///
-/// ```
+/// ```ignore
 /// use libcne_ve::request::find;
 /// use libcne_ve::cne::{Citizenship, Elector};
 ///

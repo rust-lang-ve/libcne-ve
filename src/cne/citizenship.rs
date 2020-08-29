@@ -6,36 +6,36 @@ use std::string::ToString;
 /// such as V (Venezuelan) and E (Foreigner)
 #[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub enum Citizenship {
-  V,
-  E,
+    V,
+    E,
 }
 
 pub struct ParseCitizenshipError {
-  pub message: String,
+    pub message: String,
 }
 
 impl FromStr for Citizenship {
-  type Err = ParseCitizenshipError;
+    type Err = ParseCitizenshipError;
 
-  fn from_str(s: &str) -> Result<Self, Self::Err> {
-    match s {
-      "V" => Ok(Citizenship::V),
-      "E" => Ok(Citizenship::E),
-      _ => Err(ParseCitizenshipError {
-        message: format!(
-          "Invalid citizen value provided, {}. Valid values are either V and E.",
-          s
-        ),
-      }),
+    fn from_str(s: &str) -> Result<Self, Self::Err> {
+        match s {
+            "V" => Ok(Citizenship::V),
+            "E" => Ok(Citizenship::E),
+            _ => Err(ParseCitizenshipError {
+                message: format!(
+                    "Invalid citizen value provided, {}. Valid values are either V and E.",
+                    s
+                ),
+            }),
+        }
     }
-  }
 }
 
 impl ToString for Citizenship {
-  fn to_string(&self) -> String {
-    match self {
-      Citizenship::V => String::from("V"),
-      Citizenship::E => String::from("E"),
+    fn to_string(&self) -> String {
+        match self {
+            Citizenship::V => String::from("V"),
+            Citizenship::E => String::from("E"),
+        }
     }
-  }
 }

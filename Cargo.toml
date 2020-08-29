@@ -1,11 +1,20 @@
 [package]
-name = "libcne"
+name = "libcne-ve"
 version = "0.1.0"
-authors = ["Esteban Borai <estebanborai@gmail.com>", "Angel Afonso <angelafonso60@gmail.com>"]
+authors = [
+  "Angel Afonso <angelafonso60@gmail.com>",
+  "Esteban Borai <estebanborai@gmail.com>"
+]
+
 edition = "2018"
+license = "GNU"
+description = "Fetches data from a public endpoint in the CNE website and deserializes its contents."
+readme = "README.md"
+repository = "https://github.com/rust-lang-ve/libcne-ve"
+categories = ["api", "client"]
 
 [lib]
-name = "libcne"
+name = "libcne_ve"
 path = "src/lib.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

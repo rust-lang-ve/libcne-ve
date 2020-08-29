@@ -1,5 +1,4 @@
-Fetches information from "http://www.cne.gob.ve/web/registro_electoral/ce.php"
-and returns its contents.
+Fetches data from a public endpoint in the CNE website and deserializes its contents.
 
 Copyright (C) 2020  Rust Venezuela
 

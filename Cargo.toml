@@ -7,7 +7,7 @@ authors = [
 ]
 
 edition = "2018"
-license = "GNU"
+license = "GPL-3.0"
 description = "Fetches data from a public endpoint in the CNE website and deserializes its contents."
 readme = "README.md"
 repository = "https://github.com/rust-lang-ve/libcne-ve"

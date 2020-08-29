@@ -49,6 +49,15 @@ async fn main() {
 }
 ```
 
+## Releasing
+
+To release a new version you must tag with git and push to the `main` branch.
+
+```bash
+git tag -a v0.1.0 -m "First Release"
+git push origin main --follow-tags
+```
+
 ## Contributing
 
 Every contribution to this project is welcome! Feel free to open a pull request or an issue.
